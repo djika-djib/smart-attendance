@@ -38,9 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'attendance.apps.AttendanceConfig',
-    'crispy_forms',
-    'crispy_bootstrap5',
-]
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,8 +76,13 @@ WSGI_APPLICATION = 'smart_attendance_system.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'attend',
+        'USER': 'Dennis',
+        'PASSWORD': 'Dennis_999.com',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        
     }
 }
 
